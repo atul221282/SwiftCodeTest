@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core
+namespace SwiftDemo.Core.Repository
 {
 
     /// <summary>
