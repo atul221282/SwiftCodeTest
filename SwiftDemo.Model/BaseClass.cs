@@ -10,7 +10,7 @@ namespace SwiftDemo.Model
     public class BaseClass
     {
         private int _id;
-        public byte[] _rowVersion { get; set; }
+        private byte[] _rowVersion { get; set; }
 
         /// <summary>
         /// Gets or sets the identifier.

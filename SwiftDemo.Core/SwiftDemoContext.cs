@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,13 @@ namespace SwiftDemo.Core
         {
             //TODO : - Use fluent API here to set configuration 
             //as populating models polutes the structure
+
+            //Stop pluralizing of table name in database
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+#if DEBUG
+
+#endif
         }
 
         /// <summary>
