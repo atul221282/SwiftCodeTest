@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Model", "SwiftDemo.Model\SwiftDemo.Model.csproj", "{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Core", "SwiftDemo.Core\SwiftDemo.Core.csproj", "{46AB2DB4-F9AC-4545-A34E-B2819939116C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Web", "SwiftDemo.Web\SwiftDemo.Web.csproj", "{7733691D-69F3-4B91-B3BC-4B7FDF418BC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46AB2DB4-F9AC-4545-A34E-B2819939116C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AB2DB4-F9AC-4545-A34E-B2819939116C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AB2DB4-F9AC-4545-A34E-B2819939116C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AB2DB4-F9AC-4545-A34E-B2819939116C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7733691D-69F3-4B91-B3BC-4B7FDF418BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7733691D-69F3-4B91-B3BC-4B7FDF418BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7733691D-69F3-4B91-B3BC-4B7FDF418BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7733691D-69F3-4B91-B3BC-4B7FDF418BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
