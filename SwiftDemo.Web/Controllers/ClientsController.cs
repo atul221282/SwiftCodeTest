@@ -26,7 +26,8 @@ namespace SwiftDemo.Web.Controllers
         /// <returns></returns>
         public IEnumerable<ClientRecord> Get()
         {
-            return sdUow.ClientRecords.GetAll();
+            var list= sdUow.ClientRecords.GetAll().ToList();
+            return list;
         }
     }
 }
