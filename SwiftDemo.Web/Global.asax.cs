@@ -24,7 +24,10 @@ namespace SwiftDemo.Web
             //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
+#if DEBUG
             Database.SetInitializer(new SwiftDemoInitializer());
+#endif
+
             GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);
         }
     }

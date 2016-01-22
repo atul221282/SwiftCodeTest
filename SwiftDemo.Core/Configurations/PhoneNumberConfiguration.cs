@@ -19,7 +19,8 @@ namespace SwiftDemo.Core.Configurations
         /// </summary>
         public PhoneNumberConfiguration()
         {
-            Property(x => x.Number).IsRequired().HasMaxLength(20);
+            //Set rules for Number property
+            Property(x => x.Number).IsRequired().HasMaxLength(15);
         }
     }
 }

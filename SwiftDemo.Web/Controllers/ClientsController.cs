@@ -23,24 +23,14 @@ namespace SwiftDemo.Web.Controllers
         }
 
         /// <summary>
-        /// Gets this instance.
+        /// Gets this clients records.
         /// </summary>
         /// <returns></returns>
-        public async Task<IEnumerable<ClientRecord>> Get()
+        public async Task<IHttpActionResult> Get()
         {
-            //var clientRecord = new ClientRecord { Name = "John", Address = "218 Kingfisher Street, Somewhere, Melbourne" };
-            //clientRecord.PhoneNumbers = new List<PhoneNumber>();
-            //clientRecord.PhoneNumbers.Add(new PhoneNumber { Number = "0400497250" });
-            //sdUow.ClientRecords.Add(clientRecord);
-            //sdUow.Commit();
-
-            //var atul = sdUow.ClientRecords.GetById(1);
-            //atul.PhoneNumbers.Add(new PhoneNumber { Number = "0430499210" });
-            //sdUow.Commit();
-
             var list = await Task.Factory.StartNew(() =>
              sdUow.ClientRecords.GetAll().Include(x => x.PhoneNumbers).OrderBy(x => x.Name).ToList());
-            return list;
+            return Ok<IEnumerable<ClientRecord>>(list);
         }
     }
 }

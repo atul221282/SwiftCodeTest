@@ -16,7 +16,10 @@ namespace SwiftDemo.Model
     {
         private string _name;
         private string _address;
-        //private ICollection<PhoneNumber> _phoneNumbers;
+        private ICollection<PhoneNumber> _phoneNumbers;
+        private string _formattedphoneNumbers;
+
+        
 
         public ClientRecord()
         {
@@ -55,12 +58,22 @@ namespace SwiftDemo.Model
         /// The phone numbers.
         /// </value>
         [DataMember]
-        public virtual ICollection<PhoneNumber> PhoneNumbers { get; set; }
-        //public virtual ICollection<PhoneNumber> PhoneNumbers
-        //{
-        //    get { return _phoneNumbers; }
-        //    set { _phoneNumbers = value; }
-        //}
+        public virtual ICollection<PhoneNumber> PhoneNumbers
+        {
+            get { return _phoneNumbers; }
+            set { _phoneNumbers = value; }
+        }
 
+        [DataMember]
+        public string FormattedphoneNumbers
+        {
+            get
+            {
+                return _formattedphoneNumbers
+                  = this.PhoneNumbers != null
+                  ? string.Join(", ", this.PhoneNumbers.Select(x => x.Number).ToArray())
+                  : string.Empty;
+            }
+        }
     }
 }
