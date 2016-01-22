@@ -7,7 +7,7 @@ namespace SwiftDemo.Model
     /// Represents base class property
     /// </summary>
     [DataContract]
-    public class BaseClass
+    public abstract class BaseClass
     {
         private int _id;
         private byte[] _rowVersion { get; set; }

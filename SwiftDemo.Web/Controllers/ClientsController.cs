@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Data.Entity;
 
 namespace SwiftDemo.Web.Controllers
 {
@@ -24,9 +26,20 @@ namespace SwiftDemo.Web.Controllers
         /// Gets this instance.
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<ClientRecord> Get()
+        public async Task<IEnumerable<ClientRecord>> Get()
         {
-            var list= sdUow.ClientRecords.GetAll().ToList();
+            //var clientRecord = new ClientRecord { Name = "John", Address = "218 Kingfisher Street, Somewhere, Melbourne" };
+            //clientRecord.PhoneNumbers = new List<PhoneNumber>();
+            //clientRecord.PhoneNumbers.Add(new PhoneNumber { Number = "0400497250" });
+            //sdUow.ClientRecords.Add(clientRecord);
+            //sdUow.Commit();
+
+            //var atul = sdUow.ClientRecords.GetById(1);
+            //atul.PhoneNumbers.Add(new PhoneNumber { Number = "0430499210" });
+            //sdUow.Commit();
+
+            var list = await Task.Factory.StartNew(() =>
+             sdUow.ClientRecords.GetAll().Include(x => x.PhoneNumbers).OrderBy(x => x.Name).ToList());
             return list;
         }
     }

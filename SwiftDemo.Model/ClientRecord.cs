@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -15,8 +16,12 @@ namespace SwiftDemo.Model
     {
         private string _name;
         private string _address;
-        private ICollection<PhoneNumber> _phoneNumbers;
+        //private ICollection<PhoneNumber> _phoneNumbers;
 
+        public ClientRecord()
+        {
+            this.PhoneNumbers = new List<PhoneNumber>();
+        }
         /// <summary>
         /// Gets or sets the name of the client.
         /// </summary>
@@ -50,11 +55,12 @@ namespace SwiftDemo.Model
         /// The phone numbers.
         /// </value>
         [DataMember]
-        public virtual ICollection<PhoneNumber> PhoneNumbers
-        {
-            get { return _phoneNumbers; }
-            set { _phoneNumbers = value; }
-        }
+        public virtual ICollection<PhoneNumber> PhoneNumbers { get; set; }
+        //public virtual ICollection<PhoneNumber> PhoneNumbers
+        //{
+        //    get { return _phoneNumbers; }
+        //    set { _phoneNumbers = value; }
+        //}
 
     }
 }

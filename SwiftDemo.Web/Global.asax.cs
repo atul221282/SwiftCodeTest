@@ -7,6 +7,8 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using System.Data.Entity;
+using SwiftDemo.Core;
 
 namespace SwiftDemo.Web
 {
@@ -22,7 +24,7 @@ namespace SwiftDemo.Web
             //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            Database.SetInitializer(new SwiftDemoInitializer());
             GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);
         }
     }

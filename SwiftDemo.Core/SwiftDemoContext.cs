@@ -1,4 +1,5 @@
-﻿using SwiftDemo.Model;
+﻿using SwiftDemo.Core.Configurations;
+using SwiftDemo.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -28,12 +29,12 @@ namespace SwiftDemo.Core
         /// <param name="modelBuilder">The model builder.</param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //TODO : - Use fluent API here to set configuration 
-            //as populating models polutes the structure
-
+            
             //Stop pluralizing of table name in database
+            //set rules on client and phone number table
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-
+            modelBuilder.Configurations.Add(new ClientRecordConfiguration());
+            modelBuilder.Configurations.Add(new PhoneNumberConfiguration());
 #if DEBUG
 
 #endif

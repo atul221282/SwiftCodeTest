@@ -50,12 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\ClientRecordConfiguration.cs" />
+    <Compile Include="Configurations\PhoneNumberConfiguration.cs" />
     <Compile Include="Helpers\IRepositoryProvider.cs" />
     <Compile Include="Helpers\RepositoryFactories.cs" />
     <Compile Include="Helpers\RepositoryProvider.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwiftDemoContext.cs" />
+    <Compile Include="SwiftDemoInitializer.cs" />
     <Compile Include="SwiftDemoUow.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +74,9 @@
       <Project>{59cdff8d-bd63-4e76-b2e4-f5aaff3bea81}</Project>
       <Name>SwiftDemo.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SampleData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
