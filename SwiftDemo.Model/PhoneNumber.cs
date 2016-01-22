@@ -20,11 +20,14 @@ namespace SwiftDemo.Model
 
         /// <summary>
         /// Gets or sets the number.
+        /// TODO: Get error messaget from resource file
         /// </summary>
         /// <value>
         /// The number.
         /// </value>
-        [DataMember]
+        [DataMember,
+            Required(ErrorMessage = "Phone number is mandatory"),
+            StringLength(15, ErrorMessage = "Phone number is not valid")]
         public string Number
         {
             get { return _number; }
@@ -33,6 +36,7 @@ namespace SwiftDemo.Model
 
         /// <summary>
         /// Gets or sets the client record.
+        /// TODO: Get error messaget from resource file
         /// </summary>
         /// <value>
         /// The client record.
@@ -46,11 +50,12 @@ namespace SwiftDemo.Model
 
         /// <summary>
         /// Gets or sets the client record identifier.
+        /// TODO: Get error messaget from resource file
         /// </summary>
         /// <value>
         /// The client record identifier.
         /// </value>
-        [DataMember]
+        [DataMember, Required(ErrorMessage = "Client record is mandatory")]
         public int ClientRecordId
         {
             get { return _clientRecordBelongToId; }

@@ -19,7 +19,7 @@ namespace SwiftDemo.Model
         private ICollection<PhoneNumber> _phoneNumbers;
         private string _formattedphoneNumbers;
 
-        
+
 
         public ClientRecord()
         {
@@ -27,11 +27,14 @@ namespace SwiftDemo.Model
         }
         /// <summary>
         /// Gets or sets the name of the client.
+        /// TODO: Get error messaget from resource file
         /// </summary>
         /// <value>
         /// The name.
         /// </value>
-        [DataMember]
+        [DataMember,
+            Required(ErrorMessage = "Name is mandatory"),
+            StringLength(50, ErrorMessage = "Name is not valid")]
         public string Name
         {
             get { return _name; }
@@ -40,11 +43,14 @@ namespace SwiftDemo.Model
 
         /// <summary>
         /// Gets or sets the address of the client.
+        /// TODO: Get error messaget from resource file
         /// </summary>
         /// <value>
         /// The address.
         /// </value>
-        [DataMember]
+        [DataMember,
+            Required(ErrorMessage = "Address is mandatory"),
+            StringLength(50, ErrorMessage = "Address is not valid")]
         public string Address
         {
             get { return _address; }

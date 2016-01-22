@@ -19,8 +19,8 @@ namespace SwiftDemo.Core.Configurations
         /// </summary>
         public ClientRecordConfiguration()
         {
-            Property(x => x.Name).IsRequired().HasMaxLength(150);
-            Property(x => x.Name).IsRequired().HasMaxLength(1000);
+            //Property(x => x.Name).IsRequired().HasMaxLength(150);
+            //Property(x => x.Name).IsRequired().HasMaxLength(1000);
         }
         
     }
