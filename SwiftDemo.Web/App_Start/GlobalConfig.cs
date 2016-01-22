@@ -15,11 +15,15 @@ namespace SwiftDemo.Web
             // Configure json camelCasing per the following post: http://jpapa.me/NqC2HH
             // Here we configure it to write JSON property names with camel casing
             // without changing our server-side data model:
-            var json = config.Formatters.JsonFormatter;
-            json.SerializerSettings.ContractResolver =
-                new CamelCasePropertyNamesContractResolver();
+            //var json = config.Formatters.JsonFormatter;
+            //json.SerializerSettings.ContractResolver =
+            //    new CamelCasePropertyNamesContractResolver();
 
-           
+            ////Helpful to remove circular reference
+            //config.Formatters.JsonFormatter
+            //.SerializerSettings
+            //.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
         }
     }
 }

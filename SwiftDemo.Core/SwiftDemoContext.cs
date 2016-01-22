@@ -19,7 +19,7 @@ namespace SwiftDemo.Core
         /// Initializes a new instance of the <see cref="SwiftDemoContext"/> class.
         /// </summary>
         public SwiftDemoContext()
-            : base(nameOrConnectionString: "SwiftDemo")
+            : base("SwiftDemo")
         {
         }
 

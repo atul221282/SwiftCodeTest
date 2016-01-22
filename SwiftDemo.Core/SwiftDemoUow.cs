@@ -50,7 +50,7 @@ namespace SwiftDemo.Core
             DbContext.Configuration.LazyLoadingEnabled = false;
 
             // Because Web API will perform validation, we don't need/want EF to do so
-            DbContext.Configuration.ValidateOnSaveEnabled = false;
+            //DbContext.Configuration.ValidateOnSaveEnabled = false;
 
         }
 

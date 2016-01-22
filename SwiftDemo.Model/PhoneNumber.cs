@@ -15,6 +15,8 @@ namespace SwiftDemo.Model
     public class PhoneNumber : BaseClass
     {
         private string _number;
+        private ClientRecord _clientRecordBelongTo;
+        private int _clientRecordBelongToId;
 
         /// <summary>
         /// Gets or sets the number.
@@ -27,6 +29,32 @@ namespace SwiftDemo.Model
         {
             get { return _number; }
             set { _number = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the client record.
+        /// </summary>
+        /// <value>
+        /// The client record.
+        /// </value>
+        [DataMember]
+        public virtual ClientRecord ClientRecordBelongTo
+        {
+            get { return _clientRecordBelongTo; }
+            set { _clientRecordBelongTo = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the client record identifier.
+        /// </summary>
+        /// <value>
+        /// The client record identifier.
+        /// </value>
+        [DataMember]
+        public int ClientRecordId
+        {
+            get { return _clientRecordBelongToId; }
+            set { _clientRecordBelongToId = value; }
         }
 
     }

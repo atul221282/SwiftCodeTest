@@ -58,7 +58,7 @@ namespace SwiftDemo.Model
         /// The phone numbers.
         /// </value>
         [DataMember]
-        public virtual ICollection<PhoneNumber> PhoneNumbers
+        public ICollection<PhoneNumber> PhoneNumbers
         {
             get { return _phoneNumbers; }
             set { _phoneNumbers = value; }

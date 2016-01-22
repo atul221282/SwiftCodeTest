@@ -30,7 +30,24 @@ namespace SwiftDemo.Web.Controllers
         {
             var list = await Task.Factory.StartNew(() =>
              sdUow.ClientRecords.GetAll().Include(x => x.PhoneNumbers).OrderBy(x => x.Name).ToList());
-            return Ok<IEnumerable<ClientRecord>>(list);
+
+            var dto = list
+                .Select(x => new ClientRecord
+                {
+                    Id = x.Id,
+                    Address = x.Address,
+                    Name = x.Name,
+                    RowVersion = x.RowVersion,
+                    PhoneNumbers = x.PhoneNumbers.Select(y => new PhoneNumber
+                    {
+                        Id = y.Id,
+                        Number = y.Number,
+                        RowVersion = y.RowVersion,
+                        ClientRecordId = y.ClientRecordId
+                    }).ToList()
+                });
+
+            return Ok<IEnumerable<ClientRecord>>(dto);
         }
     }
 }
