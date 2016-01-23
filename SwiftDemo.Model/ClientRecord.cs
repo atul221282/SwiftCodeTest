@@ -17,7 +17,6 @@ namespace SwiftDemo.Model
         private string _name;
         private string _address;
         private ICollection<ClientPhone> _clientPhones;
-        private string _formattedphoneNumbers;
 
 
 
@@ -71,11 +70,13 @@ namespace SwiftDemo.Model
         }
 
         [DataMember]
-        public string FormattedphoneNumbers
+        public string FormattedPhoneNumbers
         {
             get
             {
-                return "";
+                return this.ClientPhones != null
+                    ? string.Join(", ", this.ClientPhones.Select(x => x.PhoneNumber.Number).ToArray())
+                    : string.Empty;
             }
         }
     }

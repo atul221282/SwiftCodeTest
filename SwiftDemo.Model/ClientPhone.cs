@@ -20,7 +20,13 @@ namespace SwiftDemo.Model
         private PhoneNumber _phoneNumber;
         private int _phoneNumberId;
 
-        [DataMember]
+        /// <summary>
+        /// Gets or sets the phone number identifier.
+        /// </summary>
+        /// <value>
+        /// The phone number identifier.
+        /// </value>
+        [DataMember, Required(ErrorMessage = "Phone number is mandatory")]
         public int PhoneNumberId
         {
             get { return _phoneNumberId; }

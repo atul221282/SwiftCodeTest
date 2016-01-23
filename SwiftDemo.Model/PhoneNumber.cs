@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -22,7 +23,8 @@ namespace SwiftDemo.Model
         /// <value>
         /// The numbers.
         /// </value>
-        [DataMember]
+        [DataMember, Required(ErrorMessage = "Number is mandatory"),
+            StringLength(50, ErrorMessage = "Number is not valid")]
         public string Number
         {
             get { return _number; }
