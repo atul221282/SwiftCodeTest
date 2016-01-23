@@ -9,6 +9,7 @@ using System.Web.SessionState;
 using System.Web.Http;
 using System.Data.Entity;
 using SwiftDemo.Core;
+using System.Web.Optimization;
 
 namespace SwiftDemo.Web
 {
@@ -27,7 +28,7 @@ namespace SwiftDemo.Web
 #if DEBUG
             Database.SetInitializer(new SwiftDemoInitializer());
 #endif
-
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);
         }
     }

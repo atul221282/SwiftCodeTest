@@ -52,6 +52,5 @@ namespace SwiftDemo.Web.Controllers
             return Ok<IEnumerable<ClientRecord>>(filteredList.ToList());
         }
 
-
     }
 }
