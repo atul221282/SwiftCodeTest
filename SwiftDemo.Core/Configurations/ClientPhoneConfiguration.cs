@@ -20,11 +20,6 @@ namespace SwiftDemo.Core.Configurations
         public ClientPhoneConfiguration()
         {
             //Set rules for Number property
-            //Property(x => x.Number).IsRequired().HasMaxLength(15);
-            
-            //HasRequired(t => t.ClientRecordBelongTo)
-            //    .WithMany(t=>t.PhoneNumbers)
-            //    .HasForeignKey(t => t.ClientRecordId);
         }
     }
 }

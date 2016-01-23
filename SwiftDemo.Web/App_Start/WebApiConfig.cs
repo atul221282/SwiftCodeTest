@@ -61,7 +61,7 @@ namespace SwiftDemo.Web
                 routeTemplate: "api/{controller}/{action}"
             );
 
-            //PAPA: Commented this out because we wont be using MVC views
+            
             //config.Routes.MapRoute(
             //    name: "Default",
             //    url: "{controller}/{action}/{id}",

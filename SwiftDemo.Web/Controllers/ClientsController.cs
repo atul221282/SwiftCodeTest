@@ -43,6 +43,7 @@ namespace SwiftDemo.Web.Controllers
                     ClientPhones = x.ClientPhones.Select(y => new ClientPhone
                     {
                         Id = y.Id,
+                        ClientRecordId = y.ClientRecordId,
                         PhoneNumber = y.PhoneNumber,
                         RowVersion = y.RowVersion
                     }).ToList()
@@ -50,5 +51,7 @@ namespace SwiftDemo.Web.Controllers
 
             return Ok<IEnumerable<ClientRecord>>(filteredList.ToList());
         }
+
+
     }
 }
