@@ -24,6 +24,19 @@ namespace SwiftDemo.CoreContracts
         /// The client records.
         /// </value>
         IRepository<ClientRecord> ClientRecords { get; }
-        
+        /// <summary>
+        /// Gets the client phones.
+        /// </summary>
+        /// <value>
+        /// The client phones.
+        /// </value>
+        IRepository<ClientPhone> ClientPhones { get; }
+        /// <summary>
+        /// Gets the phone numbers.
+        /// </summary>
+        /// <value>
+        /// The phone numbers.
+        /// </value>
+        IRepository<PhoneNumber> PhoneNumbers { get; }
     }
 }

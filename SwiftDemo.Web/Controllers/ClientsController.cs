@@ -29,25 +29,26 @@ namespace SwiftDemo.Web.Controllers
         public async Task<IHttpActionResult> Get()
         {
             var list = await Task.Factory.StartNew(() =>
-             sdUow.ClientRecords.GetAll().Include(x => x.PhoneNumbers).OrderBy(x => x.Name).ToList());
+             sdUow.ClientRecords.GetAll().Include(x => x.ClientPhones.Select(y => y.PhoneNumber)).OrderBy(x => x.Name).ToList());
 
-            var dto = list
+            //get client records with phone numbers where phone numbers contains basic info only
+            //to avoid circular reference error
+            var filteredList = list
                 .Select(x => new ClientRecord
                 {
                     Id = x.Id,
                     Address = x.Address,
                     Name = x.Name,
                     RowVersion = x.RowVersion,
-                    PhoneNumbers = x.PhoneNumbers.Select(y => new PhoneNumber
+                    ClientPhones = x.ClientPhones.Select(y => new ClientPhone
                     {
                         Id = y.Id,
-                        Number = y.Number,
-                        RowVersion = y.RowVersion,
-                        ClientRecordId = y.ClientRecordId
+                        PhoneNumber = y.PhoneNumber,
+                        RowVersion = y.RowVersion
                     }).ToList()
                 });
 
-            return Ok<IEnumerable<ClientRecord>>(dto);
+            return Ok<IEnumerable<ClientRecord>>(filteredList.ToList());
         }
     }
 }

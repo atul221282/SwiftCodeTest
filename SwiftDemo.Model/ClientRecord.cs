@@ -16,14 +16,14 @@ namespace SwiftDemo.Model
     {
         private string _name;
         private string _address;
-        private ICollection<PhoneNumber> _phoneNumbers;
+        private ICollection<ClientPhone> _clientPhones;
         private string _formattedphoneNumbers;
 
 
 
         public ClientRecord()
         {
-            this.PhoneNumbers = new List<PhoneNumber>();
+            this.ClientPhones = new List<ClientPhone>();
         }
         /// <summary>
         /// Gets or sets the name of the client.
@@ -64,10 +64,10 @@ namespace SwiftDemo.Model
         /// The phone numbers.
         /// </value>
         [DataMember]
-        public ICollection<PhoneNumber> PhoneNumbers
+        public ICollection<ClientPhone> ClientPhones
         {
-            get { return _phoneNumbers; }
-            set { _phoneNumbers = value; }
+            get { return _clientPhones; }
+            set { _clientPhones = value; }
         }
 
         [DataMember]
@@ -75,10 +75,7 @@ namespace SwiftDemo.Model
         {
             get
             {
-                return _formattedphoneNumbers
-                  = this.PhoneNumbers != null
-                  ? string.Join(", ", this.PhoneNumbers.Select(x => x.Number).ToArray())
-                  : string.Empty;
+                return "";
             }
         }
     }

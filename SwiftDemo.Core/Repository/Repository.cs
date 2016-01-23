@@ -55,13 +55,12 @@ namespace SwiftDemo.Core.Repository
         }
 
         /// <summary>
-        /// Gets the by identifier.
+        /// Gets T class by the identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns></returns>
         public virtual T GetById(int id)
         {
-            //return DbSet.FirstOrDefault(PredicateBuilder.GetByIdPredicate<T>(id));
             return DbSet.Find(id);
         }
 

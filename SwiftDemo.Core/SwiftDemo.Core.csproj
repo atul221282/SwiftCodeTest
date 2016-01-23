@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\ClientRecordConfiguration.cs" />
-    <Compile Include="Configurations\PhoneNumberConfiguration.cs" />
+    <Compile Include="Configurations\ClientPhoneConfiguration.cs" />
     <Compile Include="Helpers\IRepositoryProvider.cs" />
     <Compile Include="Helpers\RepositoryFactories.cs" />
     <Compile Include="Helpers\RepositoryProvider.cs" />

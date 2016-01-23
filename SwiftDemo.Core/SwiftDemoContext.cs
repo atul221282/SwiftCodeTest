@@ -30,11 +30,11 @@ namespace SwiftDemo.Core
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Stop pluralizing of table name in database
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             //set rules on client and phone number table
             modelBuilder.Configurations.Add(new ClientRecordConfiguration());
-            modelBuilder.Configurations.Add(new PhoneNumberConfiguration());
+            modelBuilder.Configurations.Add(new ClientPhoneConfiguration());
         }
 
         /// <summary>
@@ -50,6 +50,14 @@ namespace SwiftDemo.Core
         /// <value>
         /// The phone numbers.
         /// </value>
-        public DbSet<PhoneNumber> PhoneNumbers { get; set; }
+        public DbSet<ClientPhone> ClientPhones { get; set; }
+
+        /// <summary>
+        /// Gets or sets the phone number.
+        /// </summary>
+        /// <value>
+        /// The phone number.
+        /// </value>
+        public DbSet<PhoneNumber> PhoneNumber { get; set; }
     }
 }

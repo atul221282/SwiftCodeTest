@@ -28,7 +28,14 @@ namespace SwiftDemo.Core
         /// The client records.
         /// </value>
         public IRepository<ClientRecord> ClientRecords { get { return GetStandardRepo<ClientRecord>(); } }
-
+        public IRepository<ClientPhone> ClientPhones { get { return GetStandardRepo<ClientPhone>(); } }
+        /// <summary>
+        /// Gets the phone numbers.
+        /// </summary>
+        /// <value>
+        /// The phone numbers.
+        /// </value>
+        public IRepository<PhoneNumber> PhoneNumbers { get { return GetStandardRepo<PhoneNumber>(); } }
 
         /// <summary>
         /// Save pending changes to the database

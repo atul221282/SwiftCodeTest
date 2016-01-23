@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
     <Compile Include="ClientRecord.cs" />
+    <Compile Include="ClientPhone.cs" />
     <Compile Include="PhoneNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

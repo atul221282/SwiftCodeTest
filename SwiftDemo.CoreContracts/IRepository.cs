@@ -17,7 +17,7 @@ namespace SwiftDemo.CoreContracts
         /// <returns></returns>
         IQueryable<T> GetAll();
         /// <summary>
-        /// Gets the by identifier.
+        /// Gets T class by the identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns></returns>
