@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <base href="/">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
 </head>
-<body>
+<body  ng-app="mainModule">
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -16,14 +18,15 @@
                 <span class="navbar-brand">Swift Booking</span>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+                <ul class="nav navbar-nav"></ul>
             </div>
         </div>
     </div>
 
     <div class="container body-content">
+
         @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Swift Booking</p>
@@ -31,5 +34,7 @@
     </div>
 
     @Scripts.Render("~/bundles/scripts")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/client")
 </body>
 </html>

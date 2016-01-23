@@ -16,7 +16,7 @@ namespace SwiftDemo.Web
 
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             // This controller-per-type route is ideal for GetAll calls.
             // It finds the method on the controller using WebAPI conventions
@@ -66,13 +66,17 @@ namespace SwiftDemo.Web
                 routeTemplate: "api/{controller}/{action}"
             );
 
-            
+            routes.MapRoute(
+                name: "SwiftDemo Client",
+                url: "MaintainClient",
+                defaults: new { controller = "Index", action = "Index" }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Index", action = "Index", id = UrlParameter.Optional }
             );
-
+           
         }
     }
 }

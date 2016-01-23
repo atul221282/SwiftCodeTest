@@ -22,12 +22,22 @@ namespace SwiftDemo.Web
                        "~/scripts/jquery-{version}.js",
                        "~/scripts/bootstrap.min.js",
                        "~/scripts/angular.min.js",
-                       "~/scripts/angular-block-ui.min",
+                       "~/scripts/angular-block-ui.min.js",
                        "~/scripts/angular-ui-router.min.js"
                        ));
+
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-            
+                        "~/scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/scripts/app/MainModule.js"
+                        ));
+
+            bundles.Add(new ScriptBundle("~/bundles/client").Include(
+                        "~/scripts/app/client/controllers/MaintainClientController.js"
+                        ));
+
+            //ClientModule
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
             BundleTable.EnableOptimizations = false;

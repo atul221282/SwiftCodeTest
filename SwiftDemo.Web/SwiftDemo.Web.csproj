@@ -182,6 +182,8 @@
     <Content Include="scripts\angular-block-ui.js" />
     <Content Include="scripts\angular-block-ui.min.js" />
     <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
     <Content Include="scripts\angular-ui-router.js" />
     <Content Include="scripts\angular-ui-router.min.js" />
     <Content Include="scripts\angular.js" />
@@ -190,7 +192,10 @@
     <Content Include="scripts\angular-block-ui.min.js.map" />
     <Content Include="scripts\angular-block-ui.js.map" />
     <Content Include="Content\angular-block-ui.css.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\app\client\controllers\MaintainClientController.js" />
+    <Content Include="scripts\app\client\templates\MaintainClient.html" />
     <Content Include="scripts\app\MainModule.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
