@@ -16,7 +16,7 @@
         blockUIConfig.autoBlock = false;
 
         var clientBaseUrl = "scripts/app/client/templates/";
-        // For any unmatched url, redirect to /state1
+        // For any unmatched url, redirect to /maintain client
         $urlRouterProvider.otherwise("/MaintainClient");
         //
         // Now set up the states

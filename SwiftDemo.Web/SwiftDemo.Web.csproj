@@ -156,8 +156,11 @@
   <ItemGroup>
     <Content Include="Content\angular-block-ui.css" />
     <Content Include="Content\angular-block-ui.min.css" />
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootswatch\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootswatch\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\bootswatch\united\bootstrap.css" />
     <Content Include="Content\bootswatch\united\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
@@ -193,6 +196,15 @@
     <Content Include="scripts\angular-block-ui.js.map" />
     <Content Include="Content\angular-block-ui.css.map" />
     <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="Content\bootswatch\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\bootswatch\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootswatch\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\bootswatch\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\bootswatch\fonts\FontAwesome.otf" />
+    <Content Include="Content\bootswatch\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootswatch\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootswatch\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootswatch\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\app\client\controllers\MaintainClientController.js" />
     <Content Include="scripts\app\client\templates\MaintainClient.html" />

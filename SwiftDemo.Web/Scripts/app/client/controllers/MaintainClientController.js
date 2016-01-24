@@ -2,7 +2,7 @@
     'use strict';
 
     /*
-     * Security role search controller
+     * Maintain client controller
      */
     angular.module("mainModule").controller("MaintainClientController", MaintainClientController);
 
@@ -12,7 +12,7 @@
 
         var vm = this;
         vm.Title = "Maintain Client";
-
+        vm.maintainClient = {};
     }
 
 })();

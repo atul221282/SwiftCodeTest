@@ -1,1 +1,54 @@
-﻿<h2>{{vm.Title}}</h2>
+﻿<form class="form-horizontal" name="vm.maintainClient" novalidate>
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+
+            <div class="form-group has-feedback" ng-class="{'has-success' :
+                     !vm.maintainClient.inputName.$pristine &&
+                     vm.maintainClient.inputName.$valid ,
+                     'has-error':!vm.maintainClient.inputName.$pristine &&
+                     !vm.maintainClient.inputName.$valid}">
+                <label for="inputName" class="control-label col-md-2">Name</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" name="inputName" placeholder="Name"
+                           data-ng-model-options="{ updateOn: 'blur'}"
+                           ng-model="vm.Client.Name" required />
+                    <span class="glyphicon glyphicon-ok form-control-feedback"
+                          ng-if="!vm.maintainClient.inputName.$pristine
+                          && vm.maintainClient.inputName.$valid"></span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback"
+                          ng-if="!vm.maintainClient.inputName.$pristine && !vm.maintainClient.inputName.$valid"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{'has-success' :
+                     !vm.maintainClient.inputAddress.$pristine &&
+                     vm.maintainClient.inputAddress.$valid ,
+                     'has-error':!vm.maintainClient.inputAddress.$pristine &&
+                     !vm.maintainClient.inputAddress.$valid}">
+                <label for="inputAddress" class="control-label col-xs-2">Address</label>
+                <div class="col-xs-10">
+                    <input type="text" class="form-control" name="inputAddress" placeholder="No, Street name, Suburb, City"
+                           data-ng-model-options="{ updateOn: 'blur'}"
+                           ng-model="vm.Client.Address" required />
+                    <span class="glyphicon glyphicon-ok form-control-feedback"
+                          ng-if="!vm.maintainClient.inputAddress.$pristine
+                          && vm.maintainClient.inputAddress.$valid"></span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback"
+                          ng-if="!vm.maintainClient.inputAddress.$pristine && !vm.maintainClient.inputAddress.$valid"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button type="submit" class="btn btn-primary"
+                            ng-disabled="vm.maintainClient.$pristine|| vm.maintainClient.$invalid">Save</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+</form>

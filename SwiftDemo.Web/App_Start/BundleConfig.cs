@@ -15,7 +15,9 @@ namespace SwiftDemo.Web
                       "~/Content/bootswatch/united/bootstrap.min.css",
                       "~/Content/Site.css",
                       "~/Content/font-awesome.min.css",
-                      "~/Content/angular-block-ui.min.css"));
+                      "~/Content/angular-block-ui.min.css",
+                      "~/Content/animate.css"
+                      ));
 
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
