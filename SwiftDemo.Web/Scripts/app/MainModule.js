@@ -3,18 +3,22 @@
     /*
      * @description Main app module
      */
-    angular.module("mainModule", ["ui.router", "blockUI", "commonModule"]);
+    angular.module("mainModule", ["ui.router", "commonModule", "ui-notification"]);
 
     /*
      * @description Configuration for main app module
      */
     angular.module("mainModule").config(config);
-    config.$inject = ["blockUIConfig", "$stateProvider", "$urlRouterProvider", "$locationProvider"];
-    function config(blockUIConfig, $stateProvider, $urlRouterProvider, $locationProvider) {
-        //nice library to display message 
-        //but block it by default we need to use it manually
-        blockUIConfig.autoBlock = false;
-
+    config.$inject = ["$httpProvider", "$stateProvider", "$urlRouterProvider", "$locationProvider"];
+    function config($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
+        
+        //$httpProvider.defaults.useXDomain = true;
+        //$httpProvider.defaults.withCredentials = true;
+        //delete $httpProvider.defaults.headers.common["X-Requested-With"];
+        //$httpProvider.defaults.headers.common["Accept"] = "application/json";
+        //$httpProvider.defaults.headers.common["Content-Type"] = "application/json";
+        //$httpProvider.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+        
         var clientBaseUrl = "scripts/app/client/templates/";
         // For any unmatched url, redirect to /maintain client
         $urlRouterProvider.otherwise("/MaintainClient");

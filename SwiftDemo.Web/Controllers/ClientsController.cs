@@ -8,6 +8,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Data.Entity;
+using System.Text;
+using System.Net.Http.Headers;
 
 namespace SwiftDemo.Web.Controllers
 {
@@ -67,5 +69,40 @@ namespace SwiftDemo.Web.Controllers
             return response;
         }
 
+        public async Task<HttpResponseMessage> Put(int Id, ClientRecord clientRecord)
+        {
+            //sdUow.ClientRecords.Update(clientRecord);
+            //sdUow.Commit();
+            //var client = new HttpClient();
+            var pp = new
+            {
+                apiKey = "3285db46-93d9-4c10-a708-c2795ae7872d",
+                booking = new
+                {
+                    pickupDetail = new
+                    {
+                        address = "57 luscombe st, brunswick, melbourne"
+                    },
+                    dropoffDetail = new
+                    {
+                        address = "105 collins st, 3000"
+                    }
+                }
+            };
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://app.getswift.co/api/v2/deliveries");
+            client.DefaultRequestHeaders
+                  .Accept
+                  .Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, new Uri("https://app.getswift.co/api/v2/deliveries"));
+            request.Content = new StringContent(Newtonsoft.Json.Linq.JObject.FromObject(pp).ToString(),
+                                                Encoding.UTF8,
+                                                "application/json");
+
+            var result = await client.SendAsync(request);
+
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
+        }
     }
 }
