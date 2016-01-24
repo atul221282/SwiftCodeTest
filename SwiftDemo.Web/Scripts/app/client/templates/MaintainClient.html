@@ -1,54 +1,81 @@
-﻿<form class="form-horizontal" name="vm.maintainClient" novalidate>
+﻿<h2>{{::vm.Title}}</h2>
+<hr />
+<form class="form-horizontal" name="vm.ClientFactory.formClientMaintenance" novalidate>
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-md-2">
 
         </div>
-        <div class="col-lg-8">
+        <div class="col-md-8">
 
             <div class="form-group has-feedback" ng-class="{'has-success' :
-                     !vm.maintainClient.inputName.$pristine &&
-                     vm.maintainClient.inputName.$valid ,
-                     'has-error':!vm.maintainClient.inputName.$pristine &&
-                     !vm.maintainClient.inputName.$valid}">
+                     !vm.ClientFactory.formClientMaintenance.inputName.$pristine &&
+                     vm.ClientFactory.formClientMaintenance.inputName.$valid ,
+                     'has-error':!vm.ClientFactory.formClientMaintenance.inputName.$pristine &&
+                     !vm.ClientFactory.formClientMaintenance.inputName.$valid}">
                 <label for="inputName" class="control-label col-md-2">Name</label>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="inputName" placeholder="Name"
                            data-ng-model-options="{ updateOn: 'blur'}"
-                           ng-model="vm.Client.Name" required />
+                           ng-model="vm.ClientFactory.Client.Name" required />
                     <span class="glyphicon glyphicon-ok form-control-feedback"
-                          ng-if="!vm.maintainClient.inputName.$pristine
-                          && vm.maintainClient.inputName.$valid"></span>
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputName.$pristine
+                          && vm.ClientFactory.formClientMaintenance.inputName.$valid"></span>
                     <span class="glyphicon glyphicon-remove form-control-feedback"
-                          ng-if="!vm.maintainClient.inputName.$pristine && !vm.maintainClient.inputName.$valid"></span>
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputName.$pristine && !vm.ClientFactory.formClientMaintenance.inputName.$valid"></span>
                 </div>
             </div>
+
             <div class="form-group has-feedback" ng-class="{'has-success' :
-                     !vm.maintainClient.inputAddress.$pristine &&
-                     vm.maintainClient.inputAddress.$valid ,
-                     'has-error':!vm.maintainClient.inputAddress.$pristine &&
-                     !vm.maintainClient.inputAddress.$valid}">
-                <label for="inputAddress" class="control-label col-xs-2">Address</label>
-                <div class="col-xs-10">
+                     !vm.ClientFactory.formClientMaintenance.inputAddress.$pristine &&
+                     vm.ClientFactory.formClientMaintenance.inputAddress.$valid ,
+                     'has-error':!vm.ClientFactory.formClientMaintenance.inputAddress.$pristine &&
+                     !vm.ClientFactory.formClientMaintenance.inputAddress.$valid}">
+                <label for="inputAddress" class="control-label col-md-2">Address</label>
+                <div class="col-md-10">
                     <input type="text" class="form-control" name="inputAddress" placeholder="No, Street name, Suburb, City"
                            data-ng-model-options="{ updateOn: 'blur'}"
-                           ng-model="vm.Client.Address" required />
+                           ng-model="vm.ClientFactory.Client.Address" required />
                     <span class="glyphicon glyphicon-ok form-control-feedback"
-                          ng-if="!vm.maintainClient.inputAddress.$pristine
-                          && vm.maintainClient.inputAddress.$valid"></span>
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputAddress.$pristine
+                          && vm.ClientFactory.formClientMaintenance.inputAddress.$valid"></span>
                     <span class="glyphicon glyphicon-remove form-control-feedback"
-                          ng-if="!vm.maintainClient.inputAddress.$pristine && !vm.maintainClient.inputAddress.$valid"></span>
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputAddress.$pristine && !vm.ClientFactory.formClientMaintenance.inputAddress.$valid"></span>
+                </div>
+            </div>
+
+            <div class="form-group has-feedback" ng-class="{'has-success' :
+                     !vm.ClientFactory.formClientMaintenance.inputNumber.$pristine &&
+                     vm.ClientFactory.formClientMaintenance.inputNumber.$valid ,
+                     'has-error':!vm.ClientFactory.formClientMaintenance.inputNumber.$pristine &&
+                     !vm.ClientFactory.formClientMaintenance.inputNumber.$valid}">
+                <label for="inputAddress" class="control-label col-md-2">Phone Number</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" name="inputNumber" placeholder="Number1,Number2 and so on"
+                           ng-pattern="/^[0-9,]+$/"
+                           ng-model="vm.ClientFactory.PhoneNumbers" required />
+                    
+                    <span class="glyphicon glyphicon-ok form-control-feedback"
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputNumber.$pristine
+                          && vm.ClientFactory.formClientMaintenance.inputNumber.$valid"></span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback"
+                          ng-if="!vm.ClientFactory.formClientMaintenance.inputNumber.$pristine
+                          && !vm.ClientFactory.formClientMaintenance.inputNumber.$valid"></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-xs-offset-2 col-xs-10">
                     <button type="submit" class="btn btn-primary"
-                            ng-disabled="vm.maintainClient.$pristine|| vm.maintainClient.$invalid">Save</button>
+                            ng-disabled="vm.ClientFactory.formClientMaintenance.$pristine
+                            || vm.ClientFactory.formClientMaintenance.$invalid" ng-click="vm.ClientFactory.SaveClient()">
+                        <i class="glyphicon glyphicon-refresh gly-spin"
+                           ng-if="vm.ClientFactory.IsBusy"></i>&nbsp;Save
+                    </button>
                 </div>
             </div>
 
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-md-2"></div>
     </div>
 
 </form>

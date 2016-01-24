@@ -36,6 +36,7 @@ namespace SwiftDemo.Web
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/client").Include(
+                        "~/scripts/app/client/ClientFactory.js",
                         "~/scripts/app/client/controllers/MaintainClientController.js"
                         ));
 
