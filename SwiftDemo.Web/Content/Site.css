@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #e9eaed;
+    background-color: #f4f6fc;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -17,9 +17,13 @@ textarea {
     /*max-width: 280px;*/
 }
 
-    input::-ms-clear {
-        display: none;
-    }
+[ng:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+input::-ms-clear {
+    display: none;
+}
 
 .margin-top-10 {
     margin-top: 10px;
@@ -151,8 +155,9 @@ input[type=number]::-webkit-outer-spin-button {
 .on-mouse-hover:hover {
     cursor: pointer;
 }
-hr{
+
+hr {
     height: 1px;
     border: 0;
-    border-top: 1px solid #545050
+    border-top: 1px solid #545050;
 }

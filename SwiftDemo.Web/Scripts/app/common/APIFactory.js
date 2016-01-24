@@ -27,7 +27,7 @@
                 method: 'POST',
                 url: apiUrl,
                 data: model || null,
-                headers: config, // Optional headers
+                //headers: config || null, // Optional headers
             });
             return xhr
         }
@@ -43,8 +43,8 @@
             var xhr = $http({
                 method: 'GET',
                 url: apiUrl,
-                params: params,
-                headers: config, // Optional headers
+                params: params || null,
+                //headers: config || null, // Optional headers
             });
 
             return xhr;

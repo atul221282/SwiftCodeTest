@@ -26,7 +26,17 @@
               templateUrl: clientBaseUrl + "MaintainClient.html",
               controller: "MaintainClientController",
               controllerAs: "vm",
-          })
+              resolve: {
+                  ClientRecords: function ($q, $http, ClientFactory) {
+                      var deferred = $q.defer();
+                      $http.get(ClientFactory.apiUrl).then(function (response) {
+                          deferred.resolve(response.data);
+                      });
+                      return deferred.promise;
+                  }
+              }
+          });
+
 
         $locationProvider.html5Mode(true);
     }

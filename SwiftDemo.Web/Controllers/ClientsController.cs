@@ -52,5 +52,20 @@ namespace SwiftDemo.Web.Controllers
             return Ok<IEnumerable<ClientRecord>>(filteredList.ToList());
         }
 
+        /// <summary>
+        /// Add the specified attendance.
+        /// </summary>
+        /// <param name="attendance">The attendance.</param>
+        /// <returns></returns>
+        public HttpResponseMessage Post(ClientRecord clientRecord)
+        {
+            sdUow.ClientRecords.Add(clientRecord);
+            sdUow.Commit();
+            // Set client record to null to fix circular reference issue
+            clientRecord.ClientPhones.ToList().ForEach(x => x.ClientRecord = null);
+            var response = Request.CreateResponse(HttpStatusCode.Created, clientRecord);
+            return response;
+        }
+
     }
 }

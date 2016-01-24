@@ -6,32 +6,50 @@
      */
     angular.module("mainModule").factory("ClientFactory", ClientFactory);
 
-    ClientFactory.$inject = ["APIFactory", "$timeout"];
-    function ClientFactory(APIFactory, $timeout) {
+    ClientFactory.$inject = ["APIFactory", "$timeout", "$q", ];
+    function ClientFactory(APIFactory, $timeout, $q) {
 
         var service = {
+            apiUrl: "api/Clients",
             formClientMaintenance: {},
             Client: {
-                Name: "", Address: "", PhoneNumbers: []
+                Name: "", Address: "", ClientPhones: [
+                ]
             },
             ClientCopy: {
-                Name: "", Address: "", PhoneNumbers: []
+                Name: "", Address: "", ClientPhones: [
+                ]
             },
-            PhoneNumbers: "",
+            ClientRecords: [],
+            ClientPhones: "",
             SaveClient: SaveClient,
+
             IsBusy: false
         }
-
+        /*
+         * @description Save client and gets the updated result
+         */
         function SaveClient() {
             service.IsBusy = true;
-            service.Client.PhoneNumbers = service.PhoneNumbers.replace(/[\s,]+/g, ',').split(",");
-            $timeout(function () {
-                console.log(service.Client);
-                service.IsBusy = false;
-                service.Client = angular.copy(service.ClientCopy);
-                service.PhoneNumbers = "";
-                service.formClientMaintenance.$setPristine();
-            }, 3000)
+            var ClientPhones = service.ClientPhones.replace(/[\s,]+/g, ',').split(",");
+            angular.forEach(ClientPhones, function (phone) {
+                service.Client.ClientPhones.push({ "ClientRecord": null, "PhoneNumber": { Id: null, Number: phone } });
+            });
+            APIFactory.Post(service.apiUrl, service.Client).then(function (response) {
+                service.ClientRecords.push(response.data);
+            }, function (error) {
+                console.log(error);
+            }).finally(function () {
+                //just for demo
+                ResetForm();
+            });
+        }
+
+        function ResetForm() {
+            service.IsBusy = false;
+            service.Client = angular.copy(service.ClientCopy);
+            service.ClientPhones = "";
+            service.formClientMaintenance.$setPristine();
         }
 
         return service;
