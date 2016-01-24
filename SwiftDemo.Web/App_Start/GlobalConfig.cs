@@ -20,7 +20,7 @@ namespace SwiftDemo.Web
             //config.Formatters.JsonFormatter
             //.SerializerSettings
             //.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-
+            config.Filters.Add(new ValidationActionFilter());
         }
     }
 }
