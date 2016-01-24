@@ -15,7 +15,6 @@ namespace SwiftDemo.Web
                       "~/Content/bootswatch/united/bootstrap.min.css",
                       "~/Content/Site.css",
                       "~/Content/font-awesome.min.css",
-                      "~/Content/angular-block-ui.min.css",
                       "~/Content/animate.css",
                       "~/Content/angular-ui-notification.min.css"
                       ));
@@ -25,7 +24,6 @@ namespace SwiftDemo.Web
                        "~/scripts/jquery-{version}.js",
                        "~/scripts/bootstrap.min.js",
                        "~/scripts/angular.min.js",
-                       "~/scripts/angular-block-ui.min.js",
                        "~/scripts/angular-ui-router.min.js",
                        "~/scripts/angular-ui-notification.min.js"
                        ));

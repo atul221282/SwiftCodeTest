@@ -9,15 +9,8 @@
      * @description Configuration for main app module
      */
     angular.module("mainModule").config(config);
-    config.$inject = ["$httpProvider", "$stateProvider", "$urlRouterProvider", "$locationProvider"];
-    function config($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
-        
-        //$httpProvider.defaults.useXDomain = true;
-        //$httpProvider.defaults.withCredentials = true;
-        //delete $httpProvider.defaults.headers.common["X-Requested-With"];
-        //$httpProvider.defaults.headers.common["Accept"] = "application/json";
-        //$httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-        //$httpProvider.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+    config.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
         
         var clientBaseUrl = "scripts/app/client/templates/";
         // For any unmatched url, redirect to /maintain client

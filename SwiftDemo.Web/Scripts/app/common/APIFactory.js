@@ -11,7 +11,8 @@
 
         var service = {
             Post: Post,
-            Get: Get
+            Get: Get,
+            Put: Put
         }
 
         /*
@@ -44,6 +45,17 @@
                 method: 'GET',
                 url: apiUrl,
                 params: params || null,
+                //headers: config || null, // Optional headers
+            });
+
+            return xhr;
+        }
+
+        function Put(apiUrl, model) {
+            var xhr = $http({
+                method: 'PUT',
+                url: apiUrl,
+                data: model || null,
                 //headers: config || null, // Optional headers
             });
 

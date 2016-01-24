@@ -10,6 +10,8 @@ using System.Web.Http;
 using System.Data.Entity;
 using System.Text;
 using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
+using SwiftDemo.Web.Helpers;
 
 namespace SwiftDemo.Web.Controllers
 {
@@ -69,12 +71,42 @@ namespace SwiftDemo.Web.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Puts the specified identifier.
+        /// </summary>
+        /// <param name="Id">The identifier.</param>
+        /// <param name="clientRecord">The client record.</param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> Put(int Id, ClientRecord clientRecord)
         {
-            //sdUow.ClientRecords.Update(clientRecord);
-            //sdUow.Commit();
-            //var client = new HttpClient();
-            var pp = new
+            sdUow.ClientRecords.Update(clientRecord);
+            sdUow.Commit();
+            return await Task.FromResult(new HttpResponseMessage(HttpStatusCode.NoContent));
+        }
+
+        /// <summary>
+        /// Sends the delivery.
+        /// </summary>
+        /// <param name="clientRecord">The client record.</param>
+        /// <returns></returns>
+        [HttpPost, Route("SendDelivery")]
+        public async Task<IHttpActionResult> SendDelivery(ClientRecord clientRecord)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var result = await client.PostStringAsync<object>("https://app.getswift.co/api/v2/deliveries", SetPayload(clientRecord));
+                return Ok(JObject.Parse(await result.Content.ReadAsStringAsync()));
+            }
+        }
+
+        /// <summary>
+        /// Sets the payload.
+        /// </summary>
+        /// <param name="clientRecord">The client record.</param>
+        /// <returns></returns>
+        private object SetPayload(ClientRecord clientRecord)
+        {
+            var payLoad = new
             {
                 apiKey = "3285db46-93d9-4c10-a708-c2795ae7872d",
                 booking = new
@@ -85,24 +117,13 @@ namespace SwiftDemo.Web.Controllers
                     },
                     dropoffDetail = new
                     {
-                        address = "105 collins st, 3000"
+                        address = clientRecord.Address
                     }
                 }
             };
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://app.getswift.co/api/v2/deliveries");
-            client.DefaultRequestHeaders
-                  .Accept
-                  .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, new Uri("https://app.getswift.co/api/v2/deliveries"));
-            request.Content = new StringContent(Newtonsoft.Json.Linq.JObject.FromObject(pp).ToString(),
-                                                Encoding.UTF8,
-                                                "application/json");
-
-            var result = await client.SendAsync(request);
-
-            return new HttpResponseMessage(HttpStatusCode.NoContent);
+            return payLoad;
         }
+
+
     }
 }
