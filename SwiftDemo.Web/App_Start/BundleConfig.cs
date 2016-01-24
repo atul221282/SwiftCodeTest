@@ -32,6 +32,8 @@ namespace SwiftDemo.Web
                         "~/scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/scripts/app/common/commonModule.js",
+                        "~/scripts/app/common/APIFactory.js",
                         "~/scripts/app/MainModule.js"
                         ));
 

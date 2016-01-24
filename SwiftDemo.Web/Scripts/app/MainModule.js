@@ -3,7 +3,7 @@
     /*
      * @description Main app module
      */
-    angular.module("mainModule", ["ui.router", "blockUI"]);
+    angular.module("mainModule", ["ui.router", "blockUI", "commonModule"]);
 
     /*
      * @description Configuration for main app module

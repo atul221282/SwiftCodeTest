@@ -12,7 +12,7 @@
                      vm.ClientFactory.formClientMaintenance.inputName.$valid ,
                      'has-error':!vm.ClientFactory.formClientMaintenance.inputName.$pristine &&
                      !vm.ClientFactory.formClientMaintenance.inputName.$valid}">
-                <label for="inputName" class="control-label col-md-2">Name</label>
+                <label for="inputName" class="control-label col-md-3">Name</label>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="inputName" placeholder="Name"
                            data-ng-model-options="{ updateOn: 'blur'}"
@@ -30,8 +30,8 @@
                      vm.ClientFactory.formClientMaintenance.inputAddress.$valid ,
                      'has-error':!vm.ClientFactory.formClientMaintenance.inputAddress.$pristine &&
                      !vm.ClientFactory.formClientMaintenance.inputAddress.$valid}">
-                <label for="inputAddress" class="control-label col-md-2">Address</label>
-                <div class="col-md-10">
+                <label for="inputAddress" class="control-label col-md-3">Address</label>
+                <div class="col-md-9">
                     <input type="text" class="form-control" name="inputAddress" placeholder="No, Street name, Suburb, City"
                            data-ng-model-options="{ updateOn: 'blur'}"
                            ng-model="vm.ClientFactory.Client.Address" required />
@@ -48,12 +48,12 @@
                      vm.ClientFactory.formClientMaintenance.inputNumber.$valid ,
                      'has-error':!vm.ClientFactory.formClientMaintenance.inputNumber.$pristine &&
                      !vm.ClientFactory.formClientMaintenance.inputNumber.$valid}">
-                <label for="inputAddress" class="control-label col-md-2">Phone Number</label>
-                <div class="col-md-10">
-                    <input type="text" class="form-control" name="inputNumber" placeholder="Number1,Number2 and so on"
-                           ng-pattern="/^[0-9,]+$/"
+                <label for="inputAddress" class="control-label col-md-3">Phone Number</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="inputNumber" placeholder="Number1, Number2 and so on"
+                           ng-pattern="/^[0-9, ]+$/"
                            ng-model="vm.ClientFactory.PhoneNumbers" required />
-                    
+
                     <span class="glyphicon glyphicon-ok form-control-feedback"
                           ng-if="!vm.ClientFactory.formClientMaintenance.inputNumber.$pristine
                           && vm.ClientFactory.formClientMaintenance.inputNumber.$valid"></span>
@@ -64,7 +64,7 @@
             </div>
 
             <div class="form-group">
-                <div class="col-xs-offset-2 col-xs-10">
+                <div class="col-md-offset-3 col-md-9">
                     <button type="submit" class="btn btn-primary"
                             ng-disabled="vm.ClientFactory.formClientMaintenance.$pristine
                             || vm.ClientFactory.formClientMaintenance.$invalid" ng-click="vm.ClientFactory.SaveClient()">

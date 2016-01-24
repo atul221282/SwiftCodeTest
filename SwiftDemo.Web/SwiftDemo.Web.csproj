@@ -209,6 +209,8 @@
     <Content Include="scripts\app\client\ClientFactory.js" />
     <Content Include="scripts\app\client\controllers\MaintainClientController.js" />
     <Content Include="scripts\app\client\templates\MaintainClient.html" />
+    <Content Include="scripts\app\common\APIFactory.js" />
+    <Content Include="scripts\app\common\commonModule.js" />
     <Content Include="scripts\app\MainModule.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
