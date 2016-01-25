@@ -46,6 +46,7 @@
                 ResetForm();
             });
         }
+
         /*
          * Reset the form data to original state
          */
@@ -67,7 +68,7 @@
                         duration: 6000,
                         position: 'top',
                         sticky: true,
-                        theme: "prime"
+                        
                     });
 
                 }
@@ -99,6 +100,7 @@
                 Notification.error(error.data);
             });
         }
+
         return service;
 
     }

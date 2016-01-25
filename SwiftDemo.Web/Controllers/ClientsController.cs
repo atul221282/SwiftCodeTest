@@ -95,7 +95,7 @@ namespace SwiftDemo.Web.Controllers
         {
             using (HttpClient client = new HttpClient())
             {
-                var result = await client.PostStringAsync<object>("https://app.getswift.co/api/v2/deliveries", SetPayload(clientRecord));
+                var result = await client.PostStringAsync<object>(CommonHelper.GetSwiftApi("deliveries"), SetPayload(clientRecord));
                 return Ok(JObject.Parse(await result.Content.ReadAsStringAsync()));
             }
         }

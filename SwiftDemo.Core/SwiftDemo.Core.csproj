@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationConstants.cs" />
     <Compile Include="Configurations\ClientRecordConfiguration.cs" />
     <Compile Include="Configurations\ClientPhoneConfiguration.cs" />
     <Compile Include="Helpers\IRepositoryProvider.cs" />
