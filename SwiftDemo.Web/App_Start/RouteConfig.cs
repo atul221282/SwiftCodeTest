@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace SwiftDemo.Web
+namespace SwiftTest.Web
 {
     public class RouteConfig
     {
@@ -67,7 +67,7 @@ namespace SwiftDemo.Web
             );
 
             routes.MapRoute(
-                name: "SwiftDemo Client",
+                name: "SwiftTest Client",
                 url: "MaintainClient",
                 defaults: new { controller = "Index", action = "Index" }
             );

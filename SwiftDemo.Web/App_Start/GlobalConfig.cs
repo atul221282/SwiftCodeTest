@@ -1,7 +1,7 @@
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
 
-namespace SwiftDemo.Web
+namespace SwiftTest.Web
 {
     public static class GlobalConfig
     {

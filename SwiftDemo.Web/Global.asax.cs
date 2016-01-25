@@ -8,10 +8,10 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using System.Data.Entity;
-using SwiftDemo.Core;
+using SwiftTest.Core;
 using System.Web.Optimization;
 
-namespace SwiftDemo.Web
+namespace SwiftTest.Web
 {
     public class Global : HttpApplication
     {

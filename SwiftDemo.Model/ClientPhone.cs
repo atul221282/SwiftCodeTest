@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Model
+namespace SwiftTest.Model
 {
     /// <summary>
     /// Represents the client phone number

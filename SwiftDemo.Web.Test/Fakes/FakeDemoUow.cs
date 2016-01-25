@@ -1,12 +1,12 @@
-﻿using SwiftDemo.CoreContracts;
+﻿using SwiftTest.CoreContracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SwiftDemo.Model;
+using SwiftTest.Model;
 
-namespace SwiftDemo.Web.Test.Fakes
+namespace SwiftTest.Web.Test.Fakes
 {
 
     public class FakeDemoUow : ISwiftDemoUow

@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SwiftDemo.Web.Controllers;
-using SwiftDemo.CoreContracts;
-using SwiftDemo.Web.Test.Fakes;
+using SwiftTest.Web.Controllers;
+using SwiftTest.CoreContracts;
+using SwiftTest.Web.Test.Fakes;
 using System.Collections.Generic;
-using SwiftDemo.Model;
+using SwiftTest.Model;
 
 using System.Linq;
 using System.Net;
@@ -16,7 +16,7 @@ using System.Web.Http.Routing;
 using Newtonsoft.Json;
 using System.Web.Http.Results;
 
-namespace SwiftDemo.Web.Test
+namespace SwiftTest.Web.Test
 {
     /// <summary>
     /// Test class for Clients controller api

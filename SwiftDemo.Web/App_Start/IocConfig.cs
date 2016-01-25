@@ -1,10 +1,10 @@
 ﻿using System.Web.Http;
-using SwiftDemo.Core;
-using SwiftDemo.CoreContracts;
+using SwiftTest.Core;
+using SwiftTest.CoreContracts;
 using Ninject;
-using SwiftDemo.Core.Helpers;
+using SwiftTest.Core.Helpers;
 
-namespace SwiftDemo.Web
+namespace SwiftTest.Web
 {
     public class IocConfig
     {

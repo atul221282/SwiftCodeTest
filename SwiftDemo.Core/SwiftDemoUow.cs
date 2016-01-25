@@ -1,13 +1,13 @@
-﻿using SwiftDemo.Core.Helpers;
-using SwiftDemo.CoreContracts;
-using SwiftDemo.Model;
+﻿using SwiftTest.Core.Helpers;
+using SwiftTest.CoreContracts;
+using SwiftTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core
+namespace SwiftTest.Core
 {
     public class SwiftDemoUow : ISwiftDemoUow, IDisposable
     {

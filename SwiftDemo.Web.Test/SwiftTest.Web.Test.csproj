@@ -117,21 +117,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SwiftDemo.CoreContracts\SwiftDemo.CoreContracts.csproj">
+    <ProjectReference Include="..\SwiftDemo.CoreContracts\SwiftTest.CoreContracts.csproj">
       <Project>{158b859c-c9f2-4f96-b83e-de5ea74b6907}</Project>
-      <Name>SwiftDemo.CoreContracts</Name>
+      <Name>SwiftTest.CoreContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SwiftDemo.Core\SwiftDemo.Core.csproj">
+    <ProjectReference Include="..\SwiftDemo.Core\SwiftTest.Core.csproj">
       <Project>{46ab2db4-f9ac-4545-a34e-b2819939116c}</Project>
-      <Name>SwiftDemo.Core</Name>
+      <Name>SwiftTest.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SwiftDemo.Model\SwiftDemo.Model.csproj">
+    <ProjectReference Include="..\SwiftDemo.Model\SwiftTest.Model.csproj">
       <Project>{59cdff8d-bd63-4e76-b2e4-f5aaff3bea81}</Project>
-      <Name>SwiftDemo.Model</Name>
+      <Name>SwiftTest.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SwiftDemo.Web\SwiftDemo.Web.csproj">
+    <ProjectReference Include="..\SwiftDemo.Web\SwiftTest.Web.csproj">
       <Project>{8436f270-97e0-44b8-93a7-8991c2848b4a}</Project>
-      <Name>SwiftDemo.Web</Name>
+      <Name>SwiftTest.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

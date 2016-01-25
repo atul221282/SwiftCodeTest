@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SwiftDemo.Web.Controllers
+namespace SwiftTest.Web.Controllers
 {
     public class IndexController : Controller
     {

@@ -1,8 +1,8 @@
 ﻿using System.Web.Http.Dependencies;
-using SwiftDemo.Web.App_Start;
+using SwiftTest.Web.App_Start;
 using Ninject;
 
-namespace SwiftDemo.Web
+namespace SwiftTest.Web
 {
     public class NinjectDependencyResolver : NinjectDependencyScope, IDependencyResolver
     {

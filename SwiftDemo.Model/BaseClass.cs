@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace SwiftDemo.Model
+namespace SwiftTest.Model
 {
     /// <summary>
     /// Represents base class property

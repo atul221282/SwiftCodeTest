@@ -1,4 +1,4 @@
-﻿using SwiftDemo.CoreContracts;
+﻿using SwiftTest.CoreContracts;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core.Repository
+namespace SwiftTest.Core.Repository
 {
 
     /// <summary>

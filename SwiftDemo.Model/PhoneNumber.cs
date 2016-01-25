@@ -6,12 +6,12 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Model
+namespace SwiftTest.Model
 {
     /// <summary>
     /// Phone number class
     /// </summary>
-    /// <seealso cref="SwiftDemo.Model.BaseClass" />
+    /// <seealso cref="SwiftTest.Model.BaseClass" />
     [DataContract]
     public class PhoneNumber : BaseClass
     {

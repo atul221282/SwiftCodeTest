@@ -1,5 +1,5 @@
-﻿using SwiftDemo.CoreContracts;
-using SwiftDemo.Model;
+﻿using SwiftTest.CoreContracts;
+using SwiftTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ using System.Data.Entity;
 using System.Text;
 using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
-using SwiftDemo.Web.Helpers;
+using SwiftTest.Web.Helpers;
 
-namespace SwiftDemo.Web.Controllers
+namespace SwiftTest.Web.Controllers
 {
     public class ClientsController : ApiControllerBase
     {

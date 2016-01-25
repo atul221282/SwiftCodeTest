@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
-using SwiftDemo.CoreContracts;
+using SwiftTest.CoreContracts;
 
-namespace SwiftDemo.Web.Controllers
+namespace SwiftTest.Web.Controllers
 {
     public abstract class ApiControllerBase : ApiController
     {

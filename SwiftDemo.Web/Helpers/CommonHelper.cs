@@ -1,10 +1,10 @@
-﻿using SwiftDemo.Core;
+﻿using SwiftTest.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SwiftDemo.Web.Helpers
+namespace SwiftTest.Web.Helpers
 {
     public class CommonHelper
     {

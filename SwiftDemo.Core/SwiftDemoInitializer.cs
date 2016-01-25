@@ -1,4 +1,4 @@
-﻿using SwiftDemo.Model;
+﻿using SwiftTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core
+namespace SwiftTest.Core
 {
     /// <summary>
     /// Initialise databse on initialisation

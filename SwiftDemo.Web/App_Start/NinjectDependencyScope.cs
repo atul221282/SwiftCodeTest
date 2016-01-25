@@ -5,7 +5,7 @@ using System.Web.Http.Dependencies;
 using Ninject;
 using Ninject.Syntax;
 
-namespace SwiftDemo.Web.App_Start
+namespace SwiftTest.Web.App_Start
 {
     public class NinjectDependencyScope : IDependencyScope
     {

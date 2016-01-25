@@ -1,5 +1,5 @@
-﻿using SwiftDemo.Core.Configurations;
-using SwiftDemo.Model;
+﻿using SwiftTest.Core.Configurations;
+using SwiftTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core
+namespace SwiftTest.Core
 {
     /// <summary>
     /// Represents SwiftDemoContext class
@@ -19,7 +19,7 @@ namespace SwiftDemo.Core
         /// Initializes a new instance of the <see cref="SwiftDemoContext"/> class.
         /// </summary>
         public SwiftDemoContext()
-            : base("SwiftDemo")
+            : base("SwiftTest")
         {
         }
 

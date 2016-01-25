@@ -1,4 +1,4 @@
-﻿using SwiftDemo.CoreContracts;
+﻿using SwiftTest.CoreContracts;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.Core.Helpers
+namespace SwiftTest.Core.Helpers
 {
     /// <summary>
     /// Interface for a class that can provide repositories by type.

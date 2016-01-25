@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Model", "SwiftDemo.Model\SwiftDemo.Model.csproj", "{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftTest.Model", "SwiftDemo.Model\SwiftTest.Model.csproj", "{59CDFF8D-BD63-4E76-B2E4-F5AAFF3BEA81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Core", "SwiftDemo.Core\SwiftDemo.Core.csproj", "{46AB2DB4-F9AC-4545-A34E-B2819939116C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftTest.Core", "SwiftDemo.Core\SwiftTest.Core.csproj", "{46AB2DB4-F9AC-4545-A34E-B2819939116C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.CoreContracts", "SwiftDemo.CoreContracts\SwiftDemo.CoreContracts.csproj", "{158B859C-C9F2-4F96-B83E-DE5EA74B6907}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftTest.CoreContracts", "SwiftDemo.CoreContracts\SwiftTest.CoreContracts.csproj", "{158B859C-C9F2-4F96-B83E-DE5EA74B6907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Web", "SwiftDemo.Web\SwiftDemo.Web.csproj", "{8436F270-97E0-44B8-93A7-8991C2848B4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftTest.Web", "SwiftDemo.Web\SwiftTest.Web.csproj", "{8436F270-97E0-44B8-93A7-8991C2848B4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F8AC9DE1-B3E7-43EB-977F-83015AFB45CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftDemo.Web.Test", "SwiftDemo.Web.Test\SwiftDemo.Web.Test.csproj", "{4C40F801-B565-4DE7-8557-35F3D67C3BC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftTest.Web.Test", "SwiftDemo.Web.Test\SwiftTest.Web.Test.csproj", "{4C40F801-B565-4DE7-8557-35F3D67C3BC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

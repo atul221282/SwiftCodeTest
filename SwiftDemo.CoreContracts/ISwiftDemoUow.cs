@@ -1,11 +1,11 @@
-﻿using SwiftDemo.Model;
+﻿using SwiftTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwiftDemo.CoreContracts
+namespace SwiftTest.CoreContracts
 {
     /// <summary>
     /// 

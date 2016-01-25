@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using SwiftDemo.CoreContracts;
-using SwiftDemo.Model;
+using SwiftTest.CoreContracts;
+using SwiftTest.Model;
 using System.Collections.Generic;
 
-namespace SwiftDemo.Web.Test.Fakes
+namespace SwiftTest.Web.Test.Fakes
 {
     internal class FakeClientRecordRepository : IRepository<ClientRecord>
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace SwiftDemo.Web.Helpers
+namespace SwiftTest.Web.Helpers
 {
     public static class HttpClientExtensions
     {
