@@ -13,6 +13,10 @@ using System.Web.Optimization;
 
 namespace SwiftTest.Web
 {
+    /// <summary>
+    /// Global file for defaults
+    /// </summary>
+    /// <seealso cref="System.Web.HttpApplication" />
     public class Global : HttpApplication
     {
         void Application_Start(object sender, EventArgs e)
