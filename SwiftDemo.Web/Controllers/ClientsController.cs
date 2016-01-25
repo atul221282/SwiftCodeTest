@@ -61,6 +61,7 @@ namespace SwiftDemo.Web.Controllers
         /// </summary>
         /// <param name="attendance">The attendance.</param>
         /// <returns></returns>
+        [Route("Post")]
         public HttpResponseMessage Post(ClientRecord clientRecord)
         {
             sdUow.ClientRecords.Add(clientRecord);

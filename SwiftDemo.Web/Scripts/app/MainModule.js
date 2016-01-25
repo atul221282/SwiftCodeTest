@@ -3,7 +3,7 @@
     /*
      * @description Main app module
      */
-    angular.module("mainModule", ["ui.router", "commonModule", "ui-notification"]);
+    angular.module("mainModule", ["ui.router", "commonModule", "ngNotify", "ngAnimate"]);
 
     /*
      * @description Configuration for main app module
@@ -11,7 +11,7 @@
     angular.module("mainModule").config(config);
     config.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
-        
+
         var clientBaseUrl = "scripts/app/client/templates/";
         // For any unmatched url, redirect to /maintain client
         $urlRouterProvider.otherwise("/MaintainClient");

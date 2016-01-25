@@ -88,7 +88,7 @@
                             </tr>
                         </thead>
                         <tbody ng-if="vm.ClientFactory.ClientRecords.length>0">
-                            <tr data-ng-repeat="clientRecord in vm.ClientFactory.ClientRecords">
+                            <tr data-ng-repeat="clientRecord in vm.ClientFactory.ClientRecords track by $index">
                                 <td>
                                     {{clientRecord.Name}}
                                 </td>
@@ -99,7 +99,7 @@
                                     {{clientRecord.FormattedPhoneNumbers}}
                                 </td>
                                 <td class="text-center">
-                                    <span title="Send it for delivery" 
+                                    <span title="Send it for delivery"
                                           ng-click="vm.ClientFactory.SendDelivery(clientRecord)"
                                           class="glyphicon glyphicon-upload on-mouse-hover"></span>
                                 </td>

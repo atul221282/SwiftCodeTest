@@ -16,7 +16,7 @@ namespace SwiftDemo.Web
                       "~/Content/Site.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/animate.css",
-                      "~/Content/angular-ui-notification.min.css"
+                      "~/Content/toaster.css"
                       ));
 
 
@@ -24,8 +24,9 @@ namespace SwiftDemo.Web
                        "~/scripts/jquery-{version}.js",
                        "~/scripts/bootstrap.min.js",
                        "~/scripts/angular.min.js",
+                       "~/scripts/angular-animate.min.js",
                        "~/scripts/angular-ui-router.min.js",
-                       "~/scripts/angular-ui-notification.min.js"
+                       "~/scripts/toaster.js"
                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
